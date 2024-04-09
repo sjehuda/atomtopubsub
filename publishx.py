@@ -134,7 +134,7 @@ class Publishx(slixmpp.ClientXMPP):
         elif version == 'rss20' or 'rss10' or 'atom10':
             if hasattr(entry, 'author'):
                 author = ET.SubElement(ent, "author")
-                name = ET.SubElement(author, "author")
+                name = ET.SubElement(author, "name")
                 name.text = entry.author
             
                 if hasattr(entry.author, 'href'):
